@@ -116,6 +116,85 @@
         </div>
 
     </section>
+    <!-- STORE -->
+
+<section class="store-section">
+
+    <h2>PRODUK TOP UP</h2>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <h3>Mobile Legends</h3>
+            <p>86 Diamond</p>
+            <div class="price">Rp 20.000</div>
+
+            <button onclick="addToCart('MLBB 86 Diamond',20000)">
+                Tambah
+            </button>
+        </div>
+
+        <div class="product-card">
+            <h3>Mobile Legends</h3>
+            <p>172 Diamond</p>
+            <div class="price">Rp 40.000</div>
+
+            <button onclick="addToCart('MLBB 172 Diamond',40000)">
+                Tambah
+            </button>
+        </div>
+
+        <div class="product-card">
+            <h3>Free Fire</h3>
+            <p>140 Diamond</p>
+            <div class="price">Rp 18.000</div>
+
+            <button onclick="addToCart('Free Fire 140 Diamond',18000)">
+                Tambah
+            </button>
+        </div>
+
+        <div class="product-card">
+            <h3>PUBG Mobile</h3>
+            <p>60 UC</p>
+            <div class="price">Rp 15.000</div>
+
+            <button onclick="addToCart('PUBG 60 UC',15000)">
+                Tambah
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CART -->
+
+<section class="cart-section">
+
+    <h2>KERANJANG BELANJA</h2>
+
+    <div id="cart-items">
+        Belum ada produk dipilih
+    </div>
+
+    <div class="cart-total">
+        Total :
+        <span id="total-price">
+            Rp 0
+        </span>
+    </div>
+
+    <a id="checkoutBtn"
+       href="#"
+       target="_blank"
+       class="checkout-btn">
+
+        CHECKOUT WHATSAPP
+
+    </a>
+
+</section>
 
     <!-- TOP UP -->
 
@@ -216,19 +295,39 @@
         </p>
 
     </footer>
+<script>
 
-    <!-- WA -->
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
 
-    <a href="https://wa.me/6281234567890" class="wa-btn">
-        💬
-    </a>
+let cart = [];
+let total = 0;
 
-    <script>
-        function closePopup() {
-            document.getElementById("popup").style.display = "none";
-        }
-    </script>
+function addToCart(product, price){
 
+    cart.push(product);
+
+    total += price;
+
+    document.getElementById("cart-items").innerHTML =
+        cart.join("<br>");
+
+    document.getElementById("total-price").innerHTML =
+        "Rp " + total.toLocaleString("id-ID");
+
+    let message =
+        "Halo Admin Apple ID Gaming%0A%0ASaya ingin membeli:%0A" +
+        cart.join("%0A") +
+        "%0A%0ATotal Pembayaran: Rp " +
+        total.toLocaleString("id-ID");
+
+    document.getElementById("checkoutBtn").href =
+        "https://wa.me/6281234567890?text=" + message;
+}
+
+</script>
+    
 </body>
 
 </html>
