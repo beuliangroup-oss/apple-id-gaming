@@ -16,39 +16,51 @@ padding:0;
 box-sizing:border-box;
 }
 
+:root{
+--primary:#7b2cff;
+--secondary:#9c4dff;
+--dark:#0b0f1c;
+--card:#141c33;
+}
+
 body{
 font-family:Poppins,sans-serif;
-background:#0b0f1c;
+background:url("assets/images/bg-galaxy.png") center center/cover fixed;
+background-color:#0b0f1c;
 color:#fff;
 overflow-x:hidden;
 }
 
-a{
-text-decoration:none;
-color:white;
-}
+/* HEADER */
 
 header{
 position:sticky;
 top:0;
 z-index:999;
-background:rgba(10,10,20,.9);
+background:rgba(10,10,20,.85);
 backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .navbar{
 max-width:1400px;
 margin:auto;
-padding:15px 25px;
+padding:15px 20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 }
 
-.logo{
+.left-nav{
 display:flex;
 align-items:center;
 gap:12px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
 }
 
 .logo img{
@@ -62,26 +74,131 @@ font-family:Orbitron,sans-serif;
 font-size:20px;
 }
 
-.menu{
+.right-nav{
 display:flex;
-gap:25px;
+align-items:center;
+gap:10px;
 }
 
+.hamburger,
+.search-btn{
+width:42px;
+height:42px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+background:#182243;
+color:white;
+font-size:18px;
+}
+
+.country-select{
+padding:10px 15px;
+border:none;
+border-radius:10px;
+background:#182243;
+color:white;
+}
+
+.login-btn{
+padding:10px 20px;
+border-radius:10px;
+background:linear-gradient(90deg,#ffb300,#ff6f00);
+font-weight:600;
+color:white;
+text-decoration:none;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+position:fixed;
+left:-300px;
+top:0;
+width:280px;
+height:100%;
+background:#101933;
+z-index:9999;
+padding:25px;
+transition:.4s;
+overflow-y:auto;
+}
+
+.sidebar.active{
+left:0;
+}
+
+.sidebar-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.sidebar-header img{
+width:50px;
+}
+
+.sidebar-header button{
+background:none;
+border:none;
+font-size:25px;
+color:white;
+cursor:pointer;
+}
+
+.sidebar a{
+display:block;
+padding:15px 0;
+border-bottom:1px solid rgba(255,255,255,.08);
+text-decoration:none;
+color:white;
+}
+
+/* HERO */
+
 .hero{
-padding:80px 20px;
+padding:100px 20px;
 text-align:center;
 background:
-radial-gradient(circle at center,#7b2cff55,transparent 60%);
+radial-gradient(circle,
+rgba(123,44,255,.35),
+transparent 70%);
 }
 
 .hero img{
-width:180px;
+width:220px;
 margin-bottom:20px;
-filter:drop-shadow(0 0 25px #7b2cff);
+filter:drop-shadow(0 0 30px #7b2cff);
+animation:floating 8s infinite ease-in-out;
+}
+
+@keyframes floating{
+
+0%{
+transform:translate(0,0);
+}
+
+25%{
+transform:translate(15px,-10px);
+}
+
+50%{
+transform:translate(-10px,12px);
+}
+
+75%{
+transform:translate(10px,15px);
+}
+
+100%{
+transform:translate(0,0);
+}
+
 }
 
 .hero h2{
-font-size:50px;
+font-size:58px;
 font-family:Orbitron,sans-serif;
 margin-bottom:15px;
 }
@@ -95,11 +212,15 @@ color:#ccc;
 .btn{
 display:inline-block;
 margin-top:25px;
-background:#7b2cff;
-padding:14px 30px;
+background:linear-gradient(90deg,#7b2cff,#9c4dff);
+padding:14px 35px;
 border-radius:50px;
 font-weight:bold;
+color:white;
+text-decoration:none;
 }
+
+/* SECTION */
 
 .section{
 padding:70px 20px;
@@ -112,6 +233,8 @@ margin-bottom:40px;
 font-family:Orbitron,sans-serif;
 }
 
+/* GAME */
+
 .game-grid{
 max-width:1200px;
 margin:auto;
@@ -121,7 +244,7 @@ gap:20px;
 }
 
 .game-card{
-background:#141c33;
+background:rgba(20,28,51,.9);
 padding:25px;
 border-radius:16px;
 text-align:center;
@@ -129,8 +252,10 @@ transition:.3s;
 }
 
 .game-card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
+
+/* PRODUCT */
 
 .product-grid{
 max-width:1200px;
@@ -141,13 +266,9 @@ gap:20px;
 }
 
 .product{
-background:#141c33;
+background:rgba(20,28,51,.9);
 padding:25px;
 border-radius:18px;
-}
-
-.product h3{
-margin-bottom:10px;
 }
 
 .price{
@@ -167,25 +288,7 @@ border-radius:10px;
 cursor:pointer;
 }
 
-.cart{
-max-width:800px;
-margin:auto;
-background:#141c33;
-padding:25px;
-border-radius:20px;
-}
-
-#cartItems{
-margin-bottom:20px;
-}
-
-.checkout{
-display:inline-block;
-background:#00c853;
-padding:14px 25px;
-border-radius:12px;
-margin-top:20px;
-}
+/* PAYMENT */
 
 .payment-grid{
 max-width:1000px;
@@ -200,8 +303,66 @@ background:#141c33;
 padding:20px;
 border-radius:15px;
 text-align:center;
-font-weight:600;
 }
+
+/* CART */
+
+.cart{
+max-width:800px;
+margin:auto;
+background:#141c33;
+padding:25px;
+border-radius:20px;
+}
+
+.checkout{
+display:inline-block;
+background:#00c853;
+padding:14px 25px;
+border-radius:12px;
+margin-top:20px;
+color:white;
+text-decoration:none;
+}
+
+/* SEARCH */
+
+.search-modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.85);
+justify-content:center;
+align-items:center;
+z-index:99999;
+}
+
+.search-box{
+background:#101933;
+padding:25px;
+border-radius:15px;
+width:90%;
+max-width:500px;
+}
+
+.search-box input{
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.search-box button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#7b2cff;
+color:white;
+}
+
+/* FOOTER */
 
 footer{
 padding:40px;
@@ -212,42 +373,51 @@ margin-top:50px;
 
 @media(max-width:768px){
 
-.menu{
-display:none;
+.hero h2{
+font-size:38px;
 }
 
-.hero h2{
-font-size:34px;
+.logo h1{
+font-size:16px;
+}
+
+.country-select{
+display:none;
 }
 
 }
 
 </style>
 </head>
-  <div class="search-modal" id="searchModal">
-
-<div class="search-box">
-
-<input
-type="text"
-placeholder="Cari game...">
-
-<button>Tutup</button>
-
-</div>
-
-</div>
 
 <body>
 
+<div class="sidebar" id="sidebar">
+
+<div class="sidebar-header">
+<img src="assets/images/logo.png">
+<button id="closeMenu">✕</button>
+</div>
+
+<a href="#games">🎮 Game</a>
+<a href="#produk">🛒 Produk</a>
+<a href="#payment">💳 Pembayaran</a>
+<a href="#">🎁 Promo</a>
+<a href="#">⭐ Keanggotaan</a>
+<a href="#">❓ FAQ</a>
+<a href="#">🎧 Dukungan Pelanggan</a>
+<a href="#">🤝 Program Kemitraan</a>
+<a href="#">💼 Program Reseller</a>
+
+</div>
+
 <header>
+
 <div class="navbar">
 
 <div class="left-nav">
 
-<button id="menuToggle" class="hamburger">
-☰
-</button>
+<button id="menuToggle" class="hamburger">☰</button>
 
 <div class="logo">
 <img src="assets/images/logo.png">
@@ -258,9 +428,7 @@ placeholder="Cari game...">
 
 <div class="right-nav">
 
-<button class="search-btn">
-🔍
-</button>
+<button id="openSearch" class="search-btn">🔍</button>
 
 <select class="country-select">
 <option>🇮🇩 ID</option>
@@ -268,52 +436,20 @@ placeholder="Cari game...">
 <option>🇲🇾 MY</option>
 </select>
 
-<a href="login.html" class="login-btn">
-MASUK
-</a>
+<a href="#" class="login-btn">MASUK</a>
 
 </div>
 
 </div>
+
 </header>
-  <div class="sidebar" id="sidebar">
-
-<div class="sidebar-header">
-
-<img src="assets/images/logo.png">
-
-<h2>APPLE ID GAMING</h2>
-
-<button id="closeMenu">✕</button>
-
-</div>
-
-<a href="#games">🎮 Game</a>
-
-<a href="#promo">🎁 Promo</a>
-
-<a href="#member">⭐ Keanggotaan</a>
-
-<a href="#faq">❓ FAQ</a>
-
-<a href="#support">🎧 Dukungan Pelanggan</a>
-
-<a href="#partnership">🤝 Program Kemitraan</a>
-
-<a href="#reseller">💼 Program Reseller</a>
-
-</div>
 
 <section class="hero">
 
-<div class="hero-overlay">
+<img src="assets/images/logo-bubble.png"
+onerror="this.src='assets/images/logo.png'">
 
-<img src="assets/images/logo-bubble.png">
-
-<h2>
-TOP UP GAME<br>
-FAVORITMU
-</h2>
+<h2>TOP UP GAME FAVORITMU</h2>
 
 <p>
 Top Up Diamond, UC, Voucher dan Membership
@@ -324,164 +460,27 @@ proses instan 24 jam.
 TOP UP SEKARANG
 </a>
 
-</div>
-
 </section>
 
-<section class="section" id="games">
+<!-- Lanjutkan section GAME, PRODUK, PAYMENT, CART milik Anda yang lama -->
 
-<h2 class="section-title">
-GAME POPULER
-</h2>
+<div class="search-modal" id="searchModal">
 
-<div class="game-grid">
+<div class="search-box">
 
-<div class="game-card">Mobile Legends</div>
-<div class="game-card">Free Fire</div>
-<div class="game-card">PUBG Mobile</div>
-<div class="game-card">Valorant</div>
-<div class="game-card">Honor of Kings</div>
-<div class="game-card">Genshin Impact</div>
-<div class="game-card">COD Mobile</div>
-<div class="game-card">Roblox</div>
+<input type="text" placeholder="Cari game favoritmu...">
 
-</div>
-
-</section>
-
-<section class="section" id="produk">
-
-<h2 class="section-title">
-PRODUK TOP UP
-</h2>
-
-<div class="product-grid">
-
-<div class="product">
-<h3>Mobile Legends 86 Diamond</h3>
-<div class="price">Rp20.000</div>
-<button onclick="addCart('MLBB 86 Diamond',20000)">
-Tambah
+<button id="closeSearch">
+Tutup
 </button>
-</div>
-
-<div class="product">
-<h3>Mobile Legends 172 Diamond</h3>
-<div class="price">Rp40.000</div>
-<button onclick="addCart('MLBB 172 Diamond',40000)">
-Tambah
-</button>
-</div>
-
-<div class="product">
-<h3>Free Fire 140 Diamond</h3>
-<div class="price">Rp18.000</div>
-<button onclick="addCart('FF 140 Diamond',18000)">
-Tambah
-</button>
-</div>
-
-<div class="product">
-<h3>PUBG 60 UC</h3>
-<div class="price">Rp15.000</div>
-<button onclick="addCart('PUBG 60 UC',15000)">
-Tambah
-</button>
-</div>
 
 </div>
 
-</section>
-
-<section class="section" id="payment">
-
-<h2 class="section-title">
-METODE PEMBAYARAN
-</h2>
-
-<div class="payment-grid">
-
-<div class="payment">QRIS</div>
-<div class="payment">DANA</div>
-<div class="payment">OVO</div>
-<div class="payment">GoPay</div>
-<div class="payment">ShopeePay</div>
-<div class="payment">Bank Transfer</div>
-
 </div>
-
-</section>
-
-<section class="section" id="cart">
-
-<h2 class="section-title">
-KERANJANG BELANJA
-</h2>
-
-<div class="cart">
-
-<div id="cartItems">
-Belum ada produk dipilih
-</div>
-
-<h3>
-Total :
-<span id="totalPrice">
-Rp0
-</span>
-</h3>
-
-<a
-id="checkoutBtn"
-class="checkout"
-href="#"
-target="_blank">
-
-Checkout WhatsApp
-
-</a>
-
-</div>
-
-</section>
-
-<footer>
-
-<h3>APPLE ID GAMING</h3>
-
-<p>
-Top Up Game Murah • Cepat • Aman • Terpercaya
-</p>
-
-</footer>
 
 <script>
 
-let cart=[];
-let total=0;
-
-function addCart(product,price){
-
-cart.push(product);
-total+=price;
-
-document.getElementById("cartItems").innerHTML=
-cart.join("<br>");
-
-document.getElementById("totalPrice").innerHTML=
-"Rp"+total.toLocaleString("id-ID");
-
-let msg=
-"Halo Admin APPLE ID GAMING%0A%0ASaya ingin membeli:%0A"+
-cart.join("%0A")+
-"%0A%0ATotal: Rp "+
-total.toLocaleString("id-ID");
-
-document.getElementById("checkoutBtn").href=
-"https://wa.me/6281298181338?text="+msg;
-
-}
-  const sidebar =
+const sidebar =
 document.getElementById("sidebar");
 
 document.getElementById("menuToggle")
@@ -505,7 +504,8 @@ document.getElementById("closeSearch")
 document.getElementById("searchModal")
 .style.display="none";
 };
-  <script>
+
+</script>
 
 </body>
 </html>
