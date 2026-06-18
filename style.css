@@ -111,83 +111,307 @@ transition:.3s;
 color:#d400ff;
 }
 
-/* HERO */
+/* ===================================
+   HERO SECTION
+=================================== */
 
 .hero{
-min-height:90vh;
+    position:relative;
+    min-height:100vh;
+    padding:120px 20px 80px;
+    text-align:center;
+    overflow:hidden;
+}
 
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+/* ===============================
+   LOGO BUBBLE
+================================ */
 
-text-align:center;
+.hero-logo-wrap{
+    display:flex;
+    justify-content:center;
+    margin-bottom:30px;
+}
 
-padding:40px 20px;
+.logo-bubble{
+    position:relative;
+    width:320px;
+    height:320px;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    backdrop-filter:blur(10px);
+
+    background:
+    radial-gradient(
+    circle at top left,
+    rgba(255,255,255,.25),
+    rgba(255,255,255,.05)
+    );
+
+    border:2px solid rgba(255,255,255,.2);
+
+    box-shadow:
+    0 0 30px #b700ff,
+    0 0 60px #b700ff,
+    inset 0 0 40px rgba(255,255,255,.2);
+
+    animation:
+    floating 5s ease-in-out infinite;
+}
+
+.logo-bubble::before{
+    content:"";
+
+    position:absolute;
+
+    width:90%;
+    height:90%;
+
+    border-radius:50%;
+
+    border:3px solid rgba(255,0,255,.7);
+
+    box-shadow:
+    0 0 20px #ff00ff,
+    0 0 50px #a100ff;
+}
+
+.logo-bubble::after{
+    content:"";
+
+    position:absolute;
+
+    top:50px;
+    left:60px;
+
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,.35);
+
+    filter:blur(8px);
 }
 
 .hero-logo{
-width:260px;
-max-width:80%;
+    width:78%;
+    border-radius:50%;
 
-margin-bottom:25px;
+    mix-blend-mode:screen;
 
-filter:
-drop-shadow(0 0 15px #a100ff)
-drop-shadow(0 0 40px #d400ff);
+    filter:
+    drop-shadow(0 0 25px #ff00ff)
+    drop-shadow(0 0 40px #9d00ff);
 }
 
-.hero h2{
-font-family:'Orbitron',sans-serif;
+/* ===============================
+   TITLE
+================================ */
 
-font-size:4rem;
-font-weight:900;
+.hero h1{
+    font-size:5rem;
+    line-height:1;
 
-background:linear-gradient(90deg,#ffffff,#ff8dfd,#d400ff);
+    font-weight:900;
 
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+    text-transform:uppercase;
 
-margin-bottom:20px;
+    background:
+    linear-gradient(
+    to bottom,
+    #ffffff,
+    #ff8cff,
+    #ff00ff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+    0 0 30px rgba(255,0,255,.6);
 }
 
 .hero p{
-font-size:1.2rem;
-max-width:700px;
-line-height:1.8;
+    max-width:700px;
+    margin:20px auto 40px;
+
+    font-size:1.2rem;
+    color:#fff;
 }
 
-.hero-btn{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
+/* ===============================
+   BUTTONS
+================================ */
 
-margin-top:40px;
+.hero-btn{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
 .btn-primary,
 .btn-secondary{
-padding:16px 35px;
 
-border-radius:50px;
+    padding:16px 40px;
+    border-radius:50px;
 
-text-decoration:none;
-font-weight:700;
+    text-decoration:none;
+    font-weight:700;
+
+    transition:.3s;
 }
 
 .btn-primary{
-background:#a100ff;
-color:white;
 
-box-shadow:
-0 0 20px #a100ff,
-0 0 40px #d400ff;
+    background:
+    linear-gradient(
+    45deg,
+    #a100ff,
+    #ff00ff
+    );
+
+    color:#fff;
+
+    box-shadow:
+    0 0 30px #c300ff;
+}
+
+.btn-primary:hover{
+    transform:translateY(-5px);
 }
 
 .btn-secondary{
-border:1px solid #d400ff;
-color:white;
+
+    border:2px solid #b700ff;
+    color:white;
+
+    backdrop-filter:blur(10px);
+}
+
+.btn-secondary:hover{
+    background:#b700ff;
+}
+
+/* ===============================
+   FLOATING BUBBLES
+================================ */
+
+.bubble{
+    position:absolute;
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+    circle at top left,
+    rgba(255,255,255,.5),
+    rgba(255,0,255,.2)
+    );
+
+    border:1px solid rgba(255,255,255,.3);
+
+    backdrop-filter:blur(10px);
+}
+
+.bubble1{
+    width:80px;
+    height:80px;
+    top:120px;
+    left:10%;
+    animation:floating 6s infinite;
+}
+
+.bubble2{
+    width:120px;
+    height:120px;
+    top:300px;
+    right:10%;
+    animation:floating 8s infinite;
+}
+
+.bubble3{
+    width:60px;
+    height:60px;
+    bottom:150px;
+    left:15%;
+    animation:floating 7s infinite;
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+
+@keyframes floating{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* ===================================
+   TABLET
+=================================== */
+
+@media(max-width:991px){
+
+.hero h1{
+    font-size:3.5rem;
+}
+
+.logo-bubble{
+    width:260px;
+    height:260px;
+}
+
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media(max-width:768px){
+
+.hero{
+    padding-top:100px;
+}
+
+.hero h1{
+    font-size:2.7rem;
+}
+
+.hero p{
+    font-size:1rem;
+}
+
+.logo-bubble{
+    width:220px;
+    height:220px;
+}
+
+.hero-btn{
+    flex-direction:column;
+    align-items:center;
+}
+
+.btn-primary,
+.btn-secondary{
+    width:90%;
+}
+
 }
 
 /* SECTION */
