@@ -328,9 +328,9 @@ color:#d400ff;
 }
 
 .bubble2{
-    width:700px;
-    height:700px;
-    top:1500px;
+    width:70px;
+    height:70px;
+    top:150px;
     right:15%;
     animation:floating 8s infinite;
 }
