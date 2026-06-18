@@ -321,9 +321,9 @@ color:#d400ff;
 
 .bubble1{
     width:80px;
-    height:95px;
+    height:80px;
     top:120px;
-    left:10%;
+    left:15%;
     animation:floating 6s infinite;
 }
 
