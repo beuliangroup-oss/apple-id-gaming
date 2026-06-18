@@ -5,11 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>APPLE ID GAMING | TOP UP GAME PREMIUM</title>
+    <title>APPLE ID GAMING | Top Up Game Premium</title>
+
+    <meta
+        name="description"
+        content="Top Up Game Murah, Cepat, Aman. Mobile Legends, Free Fire, PUBG Mobile, Valorant dan game populer lainnya."
+    >
 
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 </head>
 
 <body>
@@ -84,15 +92,15 @@
     </p>
 
     <div class="hero-btn">
-        <a href="#" class="btn-primary">
-            TOP UP SEKARANG
-        </a>
+    <a href="#topup" class="btn-primary">
+        TOP UP SEKARANG
+    </a>
 
-        <a href="#" class="btn-secondary">
-            CEK PESANAN
-        </a>
-    </div>
-
+    <a href="#cart" class="btn-secondary">
+        CEK PESANAN
+    </a>
+</div>
+        
 </section>
 
 
@@ -170,7 +178,7 @@
 
 <!-- CART -->
 
-<section class="cart-section">
+<section id="cart" class="cart-section">
 
     <h2>KERANJANG BELANJA</h2>
 
@@ -202,37 +210,51 @@
 
         <h2>TOP UP SEKARANG</h2>
 
-        <div class="form-box">
+        <form class="form-box">
 
-            <input type="text" placeholder="Masukkan User ID">
+    <input
+        type="text"
+        placeholder="Masukkan User ID"
+        required
+    >
 
-            <input type="text" placeholder="Masukkan Zone ID">
+    <input
+        type="text"
+        placeholder="Masukkan Zone ID"
+        required
+    >
 
-            <select>
-                <option>Pilih Nominal</option>
-                <option>86 Diamond</option>
-                <option>172 Diamond</option>
-                <option>257 Diamond</option>
-                <option>344 Diamond</option>
-                <option>706 Diamond</option>
-            </select>
+    <select required>
+        <option value="">Pilih Nominal</option>
+        <option>86 Diamond</option>
+        <option>172 Diamond</option>
+        <option>257 Diamond</option>
+        <option>344 Diamond</option>
+        <option>706 Diamond</option>
+    </select>
 
-            <select>
-                <option>Pilih Pembayaran</option>
-                <option>QRIS</option>
-                <option>DANA</option>
-                <option>OVO</option>
-                <option>GoPay</option>
-                <option>ShopeePay</option>
-                <option>Bank Transfer</option>
-            </select>
+    <select required>
+        <option value="">Pilih Pembayaran</option>
+        <option>QRIS</option>
+        <option>DANA</option>
+        <option>OVO</option>
+        <option>GoPay</option>
+        <option>ShopeePay</option>
+        <option>Bank Transfer</option>
+    </select>
 
-            <input type="text" placeholder="Nomor WhatsApp">
+    <input
+        type="tel"
+        placeholder="Nomor WhatsApp"
+        required
+    >
 
-            <button>
-                BELI SEKARANG
-            </button>
+    <button type="submit">
+        BELI SEKARANG
+    </button>
 
+</form>
+                
         </div>
 
     </section>
