@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+
+<title>FAQ</title>
+
+<style>
+.faq-container{
+    padding:20px;
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-title{
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.faq-item{
+    background:#1e2f5a;
+    border-radius:15px;
+    margin-bottom:15px;
+    overflow:hidden;
+}
+
+.faq-question{
+    width:100%;
+    background:none;
+    border:none;
+    color:white;
+    text-align:left;
+    padding:18px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.faq-answer{
+    display:none;
+    padding:0 18px 18px;
+    color:#d6dff0;
+    line-height:1.6;
+}
+
+.faq-item.active .faq-answer{
+    display:block;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:20px;
+    color:#ff9b31;
+    text-decoration:none;
+    font-weight:600;
+}
+</style>
+
+</head>
+<body>
+
+<div class="faq-container">
+
+<a href="index.html" class="back-btn">← Kembali</a>
+
+<h1 class="faq-title">❓ FAQ (Pertanyaan Umum)</h1>
+
+<div class="faq-item">
+<button class="faq-question">
+Bagaimana cara melakukan top up?
+</button>
+<div class="faq-answer">
+Pilih game yang ingin di-top up, masukkan ID pemain, pilih nominal, lalu lakukan pembayaran sesuai metode yang tersedia.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Berapa lama proses top up?
+</button>
+<div class="faq-answer">
+Top up biasanya diproses dalam hitungan detik hingga maksimal 5 menit setelah pembayaran berhasil.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Apa yang harus dilakukan jika top up belum masuk?
+</button>
+<div class="faq-answer">
+Silakan hubungi Dukungan Pelanggan dengan menyertakan ID transaksi dan bukti pembayaran untuk pengecekan lebih lanjut.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Metode pembayaran apa saja yang tersedia?
+</button>
+<div class="faq-answer">
+Kami mendukung Transfer Bank, QRIS, DANA, OVO, GoPay, ShopeePay, dan berbagai metode pembayaran lainnya.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Apakah transaksi aman?
+</button>
+<div class="faq-answer">
+Ya, seluruh transaksi menggunakan sistem yang aman dan terenkripsi untuk melindungi data pelanggan.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Bisakah saya meminta refund?
+</button>
+<div class="faq-answer">
+Refund hanya dapat dilakukan apabila terjadi kesalahan dari sistem. Pastikan ID dan nominal yang dipilih sudah benar sebelum melakukan pembayaran.
+</div>
+</div>
+
+</div>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(button=>{
+    button.addEventListener('click',()=>{
+        button.parentElement.classList.toggle('active');
+    });
+});
+</script>
+
+</body>
+</html>
