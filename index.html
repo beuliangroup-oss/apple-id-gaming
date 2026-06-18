@@ -1,416 +1,50 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>APPLE ID GAMING | Top Up Game Murah & Cepat</title>
 
+<meta name="description" content="Top Up Game Murah, Cepat, Aman dan Terpercaya. Mobile Legends, Free Fire, PUBG Mobile, Valorant, Roblox dan lainnya.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
+<link rel="stylesheet" href="style.css">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-:root{
---primary:#7b2cff;
---secondary:#9c4dff;
---dark:#0b0f1c;
---card:#141c33;
-}
-
-body{
-font-family:Poppins,sans-serif;
-background:url("assets/images/bg-galaxy.png") center center/cover fixed;
-background-color:#0b0f1c;
-color:#fff;
-overflow-x:hidden;
-}
-
-/* HEADER */
-
-header{
-position:sticky;
-top:0;
-z-index:999;
-background:rgba(10,10,20,.85);
-backdrop-filter:blur(15px);
-border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.navbar{
-max-width:1400px;
-margin:auto;
-padding:15px 20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.left-nav{
-display:flex;
-align-items:center;
-gap:12px;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.logo img{
-width:55px;
-height:55px;
-border-radius:50%;
-}
-
-.logo h1{
-font-family:Orbitron,sans-serif;
-font-size:20px;
-}
-
-.right-nav{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.hamburger,
-.search-btn{
-width:42px;
-height:42px;
-border:none;
-border-radius:10px;
-cursor:pointer;
-background:#182243;
-color:white;
-font-size:18px;
-}
-
-.country-select{
-padding:10px 15px;
-border:none;
-border-radius:10px;
-background:#182243;
-color:white;
-}
-
-.login-btn{
-padding:10px 20px;
-border-radius:10px;
-background:linear-gradient(90deg,#ffb300,#ff6f00);
-font-weight:600;
-color:white;
-text-decoration:none;
-}
-
-/* SIDEBAR */
-
-.sidebar{
-position:fixed;
-left:-300px;
-top:0;
-width:280px;
-height:100%;
-background:#101933;
-z-index:9999;
-padding:25px;
-transition:.4s;
-overflow-y:auto;
-}
-
-.sidebar.active{
-left:0;
-}
-
-.sidebar-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:25px;
-}
-
-.sidebar-header img{
-width:50px;
-}
-
-.sidebar-header button{
-background:none;
-border:none;
-font-size:25px;
-color:white;
-cursor:pointer;
-}
-
-.sidebar a{
-display:block;
-padding:15px 0;
-border-bottom:1px solid rgba(255,255,255,.08);
-text-decoration:none;
-color:white;
-}
-  <a href="faq.html">❓ FAQ</a>
-
-/* HERO */
-
-.hero{
-padding:100px 20px;
-text-align:center;
-background:
-radial-gradient(circle,
-rgba(123,44,255,.35),
-transparent 70%);
-}
-
-.hero img{
-width:220px;
-margin-bottom:20px;
-filter:drop-shadow(0 0 30px #7b2cff);
-animation:floating 8s infinite ease-in-out;
-}
-
-@keyframes floating{
-
-0%{
-transform:translate(0,0);
-}
-
-25%{
-transform:translate(15px,-10px);
-}
-
-50%{
-transform:translate(-10px,12px);
-}
-
-75%{
-transform:translate(10px,15px);
-}
-
-100%{
-transform:translate(0,0);
-}
-
-}
-
-.hero h2{
-font-size:58px;
-font-family:Orbitron,sans-serif;
-margin-bottom:15px;
-}
-
-.hero p{
-max-width:700px;
-margin:auto;
-color:#ccc;
-}
-
-.btn{
-display:inline-block;
-margin-top:25px;
-background:linear-gradient(90deg,#7b2cff,#9c4dff);
-padding:14px 35px;
-border-radius:50px;
-font-weight:bold;
-color:white;
-text-decoration:none;
-}
-
-/* SECTION */
-
-.section{
-padding:70px 20px;
-}
-
-.section-title{
-text-align:center;
-font-size:34px;
-margin-bottom:40px;
-font-family:Orbitron,sans-serif;
-}
-
-/* GAME */
-
-.game-grid{
-max-width:1200px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-}
-
-.game-card{
-background:rgba(20,28,51,.9);
-padding:25px;
-border-radius:16px;
-text-align:center;
-transition:.3s;
-}
-
-.game-card:hover{
-transform:translateY(-6px);
-}
-
-/* PRODUCT */
-
-.product-grid{
-max-width:1200px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.product{
-background:rgba(20,28,51,.9);
-padding:25px;
-border-radius:18px;
-}
-
-.price{
-font-size:24px;
-color:#00ff95;
-font-weight:bold;
-margin:15px 0;
-}
-
-.product button{
-width:100%;
-border:none;
-background:#7b2cff;
-color:white;
-padding:12px;
-border-radius:10px;
-cursor:pointer;
-}
-
-/* PAYMENT */
-
-.payment-grid{
-max-width:1000px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:20px;
-}
-
-.payment{
-background:#141c33;
-padding:20px;
-border-radius:15px;
-text-align:center;
-}
-
-/* CART */
-
-.cart{
-max-width:800px;
-margin:auto;
-background:#141c33;
-padding:25px;
-border-radius:20px;
-}
-
-.checkout{
-display:inline-block;
-background:#00c853;
-padding:14px 25px;
-border-radius:12px;
-margin-top:20px;
-color:white;
-text-decoration:none;
-}
-
-/* SEARCH */
-
-.search-modal{
-display:none;
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.85);
-justify-content:center;
-align-items:center;
-z-index:99999;
-}
-
-.search-box{
-background:#101933;
-padding:25px;
-border-radius:15px;
-width:90%;
-max-width:500px;
-}
-
-.search-box input{
-width:100%;
-padding:15px;
-border:none;
-border-radius:10px;
-margin-bottom:15px;
-}
-
-.search-box button{
-width:100%;
-padding:12px;
-border:none;
-border-radius:10px;
-background:#7b2cff;
-color:white;
-}
-
-/* FOOTER */
-
-footer{
-padding:40px;
-text-align:center;
-background:#070b14;
-margin-top:50px;
-}
-
-@media(max-width:768px){
-
-.hero h2{
-font-size:38px;
-}
-
-.logo h1{
-font-size:16px;
-}
-
-.country-select{
-display:none;
-}
-
-}
-
-</style>
 </head>
 
 <body>
-<body>
+
+<!-- OVERLAY -->
+<div id="overlay" class="overlay"></div>
 
 <!-- SIDEBAR -->
 <div class="sidebar" id="sidebar">
 
 <div class="sidebar-header">
-<img src="assets/images/logo.png" alt="">
-<button id="closeMenu">✕</button>
+
+<img src="assets/images/logo.png" alt="Logo">
+
+<button id="closeMenu">
+✕
+</button>
+
 </div>
 
 <a href="#games">🎮 Game</a>
 <a href="#produk">🛒 Produk</a>
 <a href="#payment">💳 Pembayaran</a>
-<a href="#promo">🎁 Promo</a>
-<a href="#member">⭐ Keanggotaan</a>
-<a href="#faq">❓ FAQ</a>
-<a href="#support">🎧 Dukungan Pelanggan</a>
-<a href="#partnership">🤝 Program Kemitraan</a>
-<a href="#reseller">💼 Program Reseller</a>
+<a href="promo.html">🎁 Promo</a>
+<a href="keanggotaan.html">⭐ Keanggotaan</a>
+<a href="faq.html">❓ FAQ</a>
+<a href="dukungan.html">🎧 Dukungan Pelanggan</a>
+<a href="kemitraan.html">🤝 Program Kemitraan</a>
+<a href="reseller.html">💼 Program Reseller</a>
 
 </div>
 
@@ -426,8 +60,14 @@ display:none;
 </button>
 
 <div class="logo">
-<img src="assets/images/logo.png" alt="">
-<h1>APPLE ID GAMING</h1>
+
+<img src="assets/images/logo.png" alt="Logo">
+
+<h1>
+APPLE ID
+<span>GAMING</span>
+</h1>
+
 </div>
 
 </div>
@@ -461,8 +101,8 @@ MASUK
 
 <img
 src="assets/images/logo-bubble.png"
-class="bubble-logo"
-alt="Logo">
+alt="APPLE ID GAMING"
+class="bubble-logo">
 
 <h2>
 TOP UP GAME<br>
@@ -470,8 +110,7 @@ FAVORITMU
 </h2>
 
 <p>
-Top Up Diamond, UC, Voucher dan Membership
-proses instan 24 jam.
+Top Up Diamond, UC, Voucher, Membership dan berbagai kebutuhan game dengan proses instan 24 jam.
 </p>
 
 <a href="#produk" class="btn">
@@ -485,6 +124,8 @@ TOP UP SEKARANG
 <!-- GAME -->
 <section class="section" id="games">
 
+<div class="container">
+
 <h2 class="section-title">
 GAME POPULER
 </h2>
@@ -494,11 +135,13 @@ GAME POPULER
 <div class="game-card">Mobile Legends</div>
 <div class="game-card">Free Fire</div>
 <div class="game-card">PUBG Mobile</div>
+<div class="game-card">Honor Of Kings</div>
 <div class="game-card">Valorant</div>
-<div class="game-card">Honor of Kings</div>
 <div class="game-card">Genshin Impact</div>
-<div class="game-card">COD Mobile</div>
 <div class="game-card">Roblox</div>
+<div class="game-card">COD Mobile</div>
+
+</div>
 
 </div>
 
@@ -507,13 +150,39 @@ GAME POPULER
 <!-- PRODUK -->
 <section class="section" id="produk">
 
+<div class="container">
+
 <h2 class="section-title">
 PRODUK TOP UP
 </h2>
 
 <div class="product-grid">
 
-<!-- PRODUK ANDA -->
+<div class="product">
+<h3>86 Diamond MLBB</h3>
+<div class="price">Rp 20.000</div>
+<button>BELI SEKARANG</button>
+</div>
+
+<div class="product">
+<h3>172 Diamond MLBB</h3>
+<div class="price">Rp 40.000</div>
+<button>BELI SEKARANG</button>
+</div>
+
+<div class="product">
+<h3>Weekly Diamond Pass</h3>
+<div class="price">Rp 28.000</div>
+<button>BELI SEKARANG</button>
+</div>
+
+<div class="product">
+<h3>Free Fire 140 Diamond</h3>
+<div class="price">Rp 18.000</div>
+<button>BELI SEKARANG</button>
+</div>
+
+</div>
 
 </div>
 
@@ -521,6 +190,8 @@ PRODUK TOP UP
 
 <!-- PAYMENT -->
 <section class="section" id="payment">
+
+<div class="container">
 
 <h2 class="section-title">
 METODE PEMBAYARAN
@@ -537,83 +208,41 @@ METODE PEMBAYARAN
 
 </div>
 
+</div>
+
 </section>
 
 <!-- PROMO -->
-<section class="section" id="promo">
+<section class="section">
+
+<div class="container">
 
 <h2 class="section-title">
-PROMO
+PROMO TERBARU
 </h2>
 
-<p style="text-align:center">
-Promo terbaru APPLE ID GAMING.
+<p style="text-align:center;">
+Nikmati promo dan diskon spesial setiap minggu untuk berbagai game favorit.
 </p>
 
-</section>
-
-<!-- MEMBER -->
-<section class="section" id="member">
-
-<h2 class="section-title">
-KEANGGOTAAN
-</h2>
-
-<p style="text-align:center">
-Benefit dan informasi member.
-</p>
-
-</section>
-
-<!-- FAQ -->
-<section class="section" id="faq">
-
-<h2 class="section-title">
-FAQ
-</h2>
-
-<p style="text-align:center">
-Pertanyaan yang sering diajukan.
-</p>
+</div>
 
 </section>
 
 <!-- SUPPORT -->
-<section class="section" id="support">
+<section class="section">
+
+<div class="container">
 
 <h2 class="section-title">
 DUKUNGAN PELANGGAN
 </h2>
 
-<p style="text-align:center">
-WhatsApp : 081298181338
+<p style="text-align:center;">
+WhatsApp : 0812-9818-1338
 </p>
 
-</section>
-
-<!-- PARTNERSHIP -->
-<section class="section" id="partnership">
-
-<h2 class="section-title">
-PROGRAM KEMITRAAN
-</h2>
-
-<p style="text-align:center">
-Informasi kerjasama APPLE ID GAMING.
-</p>
-
-</section>
-
-<!-- RESELLER -->
-<section class="section" id="reseller">
-
-<h2 class="section-title">
-PROGRAM RESELLER
-</h2>
-
-<p style="text-align:center">
-Daftar menjadi reseller APPLE ID GAMING.
-</p>
+</div>
 
 </section>
 
@@ -637,11 +266,19 @@ Tutup
 <!-- FOOTER -->
 <footer>
 
+<div class="container">
+
 <h3>APPLE ID GAMING</h3>
 
 <p>
 Top Up Game Murah • Cepat • Aman • Terpercaya
 </p>
+
+<p style="margin-top:10px;color:#999;">
+© 2025 APPLE ID GAMING. All Rights Reserved.
+</p>
+
+</div>
 
 </footer>
 
@@ -650,28 +287,65 @@ Top Up Game Murah • Cepat • Aman • Terpercaya
 const sidebar =
 document.getElementById("sidebar");
 
-document.getElementById("menuToggle")
-.onclick = () =>{
+const overlay =
+document.getElementById("overlay");
+
+document
+.getElementById("menuToggle")
+.addEventListener("click",()=>{
+
 sidebar.classList.add("active");
-};
+overlay.classList.add("active");
 
-document.getElementById("closeMenu")
-.onclick = () =>{
+});
+
+document
+.getElementById("closeMenu")
+.addEventListener("click",closeSidebar);
+
+overlay.addEventListener(
+"click",
+closeSidebar
+);
+
+function closeSidebar(){
+
 sidebar.classList.remove("active");
-};
+overlay.classList.remove("active");
 
-document.getElementById("openSearch")
-.onclick = () =>{
-document.getElementById("searchModal")
+}
+
+document
+.querySelectorAll(".sidebar a")
+.forEach(link=>{
+
+link.addEventListener("click",()=>{
+closeSidebar();
+});
+
+});
+
+document
+.getElementById("openSearch")
+.addEventListener("click",()=>{
+
+document
+.getElementById("searchModal")
 .style.display="flex";
-};
 
-document.getElementById("closeSearch")
-.onclick = () =>{
-document.getElementById("searchModal")
+});
+
+document
+.getElementById("closeSearch")
+.addEventListener("click",()=>{
+
+document
+.getElementById("searchModal")
 .style.display="none";
-};
+
+});
 
 </script>
 
 </body>
+</html>
