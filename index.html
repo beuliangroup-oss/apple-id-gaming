@@ -481,6 +481,31 @@ document.getElementById("checkoutBtn").href=
 "https://wa.me/6281298181338?text="+msg;
 
 }
+  const sidebar =
+document.getElementById("sidebar");
+
+document.getElementById("menuToggle")
+.onclick = () =>{
+sidebar.classList.add("active");
+};
+
+document.getElementById("closeMenu")
+.onclick = () =>{
+sidebar.classList.remove("active");
+};
+
+document.getElementById("openSearch")
+.onclick = () =>{
+document.getElementById("searchModal")
+.style.display="flex";
+};
+
+document.getElementById("closeSearch")
+.onclick = () =>{
+document.getElementById("searchModal")
+.style.display="none";
+};
+  <script>
 
 </body>
 </html>
