@@ -224,33 +224,96 @@ font-size:34px;
 
 </style>
 </head>
+  <div class="search-modal" id="searchModal">
+
+<div class="search-box">
+
+<input
+type="text"
+placeholder="Cari game...">
+
+<button>Tutup</button>
+
+</div>
+
+</div>
 
 <body>
 
 <header>
 <div class="navbar">
 
+<div class="left-nav">
+
+<button id="menuToggle" class="hamburger">
+☰
+</button>
+
 <div class="logo">
-<img src="assets/images/logo.png" alt="">
+<img src="assets/images/logo.png">
 <h1>APPLE ID GAMING</h1>
 </div>
 
-<div class="menu">
-<a href="#games">Game</a>
-<a href="#produk">Produk</a>
-<a href="#payment">Pembayaran</a>
-<a href="#cart">Keranjang</a>
+</div>
+
+<div class="right-nav">
+
+<button class="search-btn">
+🔍
+</button>
+
+<select class="country-select">
+<option>🇮🇩 ID</option>
+<option>🇺🇸 EN</option>
+<option>🇲🇾 MY</option>
+</select>
+
+<a href="login.html" class="login-btn">
+MASUK
+</a>
+
 </div>
 
 </div>
 </header>
+  <div class="sidebar" id="sidebar">
+
+<div class="sidebar-header">
+
+<img src="assets/images/logo.png">
+
+<h2>APPLE ID GAMING</h2>
+
+<button id="closeMenu">✕</button>
+
+</div>
+
+<a href="#games">🎮 Game</a>
+
+<a href="#promo">🎁 Promo</a>
+
+<a href="#member">⭐ Keanggotaan</a>
+
+<a href="#faq">❓ FAQ</a>
+
+<a href="#support">🎧 Dukungan Pelanggan</a>
+
+<a href="#partnership">🤝 Program Kemitraan</a>
+
+<a href="#reseller">💼 Program Reseller</a>
+
+</div>
 
 <section class="hero">
 
-<img src="assets/images/logo-bubble.png"
-onerror="this.src='assets/images/logo.png'">
+<div class="hero-overlay">
 
-<h2>TOP UP GAME FAVORITMU</h2>
+<img src="assets/images/logo-bubble.png">
+
+<h2>
+TOP UP GAME<br>
+FAVORITMU
+</h2>
 
 <p>
 Top Up Diamond, UC, Voucher dan Membership
@@ -260,6 +323,8 @@ proses instan 24 jam.
 <a href="#produk" class="btn">
 TOP UP SEKARANG
 </a>
+
+</div>
 
 </section>
 
@@ -416,8 +481,6 @@ document.getElementById("checkoutBtn").href=
 "https://wa.me/6281298181338?text="+msg;
 
 }
-
-</script>
 
 </body>
 </html>
