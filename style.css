@@ -658,3 +658,22 @@ border-radius:15px;
 }
 
 }
+.logo h1 span{
+color:#9c4dff;
+}
+
+.overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.65);
+backdrop-filter:blur(2px);
+opacity:0;
+visibility:hidden;
+transition:.3s;
+z-index:9998;
+}
+
+.overlay.active{
+opacity:1;
+visibility:visible;
+}
