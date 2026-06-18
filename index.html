@@ -1,353 +1,423 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>APPLE ID GAMING | Top Up Game Premium</title>
+<title>APPLE ID GAMING | Top Up Game Murah & Cepat</title>
 
-    <meta
-        name="description"
-        content="Top Up Game Murah, Cepat, Aman. Mobile Legends, Free Fire, PUBG Mobile, Valorant dan game populer lainnya."
-    >
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+<style>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Poppins,sans-serif;
+background:#0b0f1c;
+color:#fff;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(10,10,20,.9);
+backdrop-filter:blur(15px);
+}
+
+.navbar{
+max-width:1400px;
+margin:auto;
+padding:15px 25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+width:55px;
+height:55px;
+border-radius:50%;
+}
+
+.logo h1{
+font-family:Orbitron,sans-serif;
+font-size:20px;
+}
+
+.menu{
+display:flex;
+gap:25px;
+}
+
+.hero{
+padding:80px 20px;
+text-align:center;
+background:
+radial-gradient(circle at center,#7b2cff55,transparent 60%);
+}
+
+.hero img{
+width:180px;
+margin-bottom:20px;
+filter:drop-shadow(0 0 25px #7b2cff);
+}
+
+.hero h2{
+font-size:50px;
+font-family:Orbitron,sans-serif;
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+color:#ccc;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+background:#7b2cff;
+padding:14px 30px;
+border-radius:50px;
+font-weight:bold;
+}
+
+.section{
+padding:70px 20px;
+}
+
+.section-title{
+text-align:center;
+font-size:34px;
+margin-bottom:40px;
+font-family:Orbitron,sans-serif;
+}
+
+.game-grid{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.game-card{
+background:#141c33;
+padding:25px;
+border-radius:16px;
+text-align:center;
+transition:.3s;
+}
+
+.game-card:hover{
+transform:translateY(-5px);
+}
+
+.product-grid{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.product{
+background:#141c33;
+padding:25px;
+border-radius:18px;
+}
+
+.product h3{
+margin-bottom:10px;
+}
+
+.price{
+font-size:24px;
+color:#00ff95;
+font-weight:bold;
+margin:15px 0;
+}
+
+.product button{
+width:100%;
+border:none;
+background:#7b2cff;
+color:white;
+padding:12px;
+border-radius:10px;
+cursor:pointer;
+}
+
+.cart{
+max-width:800px;
+margin:auto;
+background:#141c33;
+padding:25px;
+border-radius:20px;
+}
+
+#cartItems{
+margin-bottom:20px;
+}
+
+.checkout{
+display:inline-block;
+background:#00c853;
+padding:14px 25px;
+border-radius:12px;
+margin-top:20px;
+}
+
+.payment-grid{
+max-width:1000px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+}
+
+.payment{
+background:#141c33;
+padding:20px;
+border-radius:15px;
+text-align:center;
+font-weight:600;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#070b14;
+margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.menu{
+display:none;
+}
+
+.hero h2{
+font-size:34px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-    <!-- POPUP -->
-    <div class="popup-overlay" id="popup">
-        <div class="popup-box">
+<header>
+<div class="navbar">
 
-            <h2>🎮 Selamat Datang</h2>
-
-            <p>
-                Top Up Game Murah, Cepat dan Aman
-            </p>
-
-            <div class="promo">
-                KODE PROMO <br>
-                <strong>APPLE10</strong>
-            </div>
-
-            <button onclick="closePopup()">
-                MULAI TOP UP
-            </button>
-
-        </div>
-    </div>
-
-    <!-- HEADER -->
-
-    <header>
-
-        <nav class="navbar">
-
-            <div class="logo-wrap">
-
-                <img src="assets/images/logo.png" alt="APPLE ID GAMING">
-
-                <h1>APPLE ID GAMING</h1>
-
-            </div>
-
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#topup">Top Up</a></li>
-                <li><a href="#promo">Promo</a></li>
-                <li><a href="#testimoni">Testimoni</a></li>
-                <li><a href="#kontak">Kontak</a></li>
-            </ul>
-
-        </nav>
-
-    </header>
-
-    <!-- HERO -->
-
-    <section class="hero">
-    
-    <div class="bubble bubble1"></div>
-    <div class="bubble bubble2"></div>
-    <div class="bubble bubble3"></div>
-
-    <div class="hero-logo-wrap">
-        <div class="logo-bubble">
-            <img src="assets/images/logo-bubble.png" alt="Apple ID Gaming" class="hero-logo">
-        </div>
-    </div>
-
-    <h1>TOP UP GAME<br>FAVORITMU</h1>
-
-    <p>
-        Top Up Diamond, UC, Voucher dan Membership
-        dengan proses instan 24 jam.
-    </p>
-
-    <div class="hero-btn">
-    <a href="#topup" class="btn-primary">
-        TOP UP SEKARANG
-    </a>
-
-    <a href="#cart" class="btn-secondary">
-        CEK PESANAN
-    </a>
+<div class="logo">
+<img src="assets/images/logo.png" alt="">
+<h1>APPLE ID GAMING</h1>
 </div>
-        
-</section>
 
+<div class="menu">
+<a href="#games">Game</a>
+<a href="#produk">Produk</a>
+<a href="#payment">Pembayaran</a>
+<a href="#cart">Keranjang</a>
+</div>
 
-    <!-- GAME -->
+</div>
+</header>
 
-    <section class="games">
+<section class="hero">
 
-        <h2>GAME POPULER</h2>
+<img src="assets/images/logo-bubble.png"
+onerror="this.src='assets/images/logo.png'">
 
-        <div class="game-grid">
+<h2>TOP UP GAME FAVORITMU</h2>
 
-            <div class="game-card">Mobile Legends</div>
-            <div class="game-card">Free Fire</div>
-            <div class="game-card">PUBG Mobile</div>
-            <div class="game-card">Honor Of Kings</div>
-            <div class="game-card">Valorant</div>
-            <div class="game-card">Genshin Impact</div>
-            <div class="game-card">COD Mobile</div>
-            <div class="game-card">Arena Breakout</div>
+<p>
+Top Up Diamond, UC, Voucher dan Membership
+proses instan 24 jam.
+</p>
 
-        </div>
-
-    </section>
-    <!-- STORE -->
-
-<section class="store-section">
-
-    <h2>PRODUK TOP UP</h2>
-
-    <div class="product-grid">
-
-        <div class="product-card">
-            <h3>Mobile Legends</h3>
-            <p>86 Diamond</p>
-            <div class="price">Rp 20.000</div>
-
-            <button onclick="addToCart('MLBB 86 Diamond',20000)">
-                Tambah
-            </button>
-        </div>
-
-        <div class="product-card">
-            <h3>Mobile Legends</h3>
-            <p>172 Diamond</p>
-            <div class="price">Rp 40.000</div>
-
-            <button onclick="addToCart('MLBB 172 Diamond',40000)">
-                Tambah
-            </button>
-        </div>
-
-        <div class="product-card">
-            <h3>Free Fire</h3>
-            <p>140 Diamond</p>
-            <div class="price">Rp 18.000</div>
-
-            <button onclick="addToCart('Free Fire 140 Diamond',18000)">
-                Tambah
-            </button>
-        </div>
-
-        <div class="product-card">
-            <h3>PUBG Mobile</h3>
-            <p>60 UC</p>
-            <div class="price">Rp 15.000</div>
-
-            <button onclick="addToCart('PUBG 60 UC',15000)">
-                Tambah
-            </button>
-        </div>
-
-    </div>
+<a href="#produk" class="btn">
+TOP UP SEKARANG
+</a>
 
 </section>
 
-<!-- CART -->
+<section class="section" id="games">
 
-<section id="cart" class="cart-section">
+<h2 class="section-title">
+GAME POPULER
+</h2>
 
-    <h2>KERANJANG BELANJA</h2>
+<div class="game-grid">
 
-    <div id="cart-items">
-        Belum ada produk dipilih
-    </div>
+<div class="game-card">Mobile Legends</div>
+<div class="game-card">Free Fire</div>
+<div class="game-card">PUBG Mobile</div>
+<div class="game-card">Valorant</div>
+<div class="game-card">Honor of Kings</div>
+<div class="game-card">Genshin Impact</div>
+<div class="game-card">COD Mobile</div>
+<div class="game-card">Roblox</div>
 
-    <div class="cart-total">
-        Total :
-        <span id="total-price">
-            Rp 0
-        </span>
-    </div>
-
-    <a id="checkoutBtn"
-       href="#"
-       target="_blank"
-       class="checkout-btn">
-
-        CHECKOUT WHATSAPP
-
-    </a>
+</div>
 
 </section>
 
-    <!-- TOP UP -->
+<section class="section" id="produk">
 
-    <section id="topup">
+<h2 class="section-title">
+PRODUK TOP UP
+</h2>
 
-        <h2>TOP UP SEKARANG</h2>
+<div class="product-grid">
 
-        <form class="form-box">
+<div class="product">
+<h3>Mobile Legends 86 Diamond</h3>
+<div class="price">Rp20.000</div>
+<button onclick="addCart('MLBB 86 Diamond',20000)">
+Tambah
+</button>
+</div>
 
-    <input
-        type="text"
-        placeholder="Masukkan User ID"
-        required
-    >
+<div class="product">
+<h3>Mobile Legends 172 Diamond</h3>
+<div class="price">Rp40.000</div>
+<button onclick="addCart('MLBB 172 Diamond',40000)">
+Tambah
+</button>
+</div>
 
-    <input
-        type="text"
-        placeholder="Masukkan Zone ID"
-        required
-    >
+<div class="product">
+<h3>Free Fire 140 Diamond</h3>
+<div class="price">Rp18.000</div>
+<button onclick="addCart('FF 140 Diamond',18000)">
+Tambah
+</button>
+</div>
 
-    <select required>
-        <option value="">Pilih Nominal</option>
-        <option>86 Diamond</option>
-        <option>172 Diamond</option>
-        <option>257 Diamond</option>
-        <option>344 Diamond</option>
-        <option>706 Diamond</option>
-    </select>
+<div class="product">
+<h3>PUBG 60 UC</h3>
+<div class="price">Rp15.000</div>
+<button onclick="addCart('PUBG 60 UC',15000)">
+Tambah
+</button>
+</div>
 
-    <select required>
-        <option value="">Pilih Pembayaran</option>
-        <option>QRIS</option>
-        <option>DANA</option>
-        <option>OVO</option>
-        <option>GoPay</option>
-        <option>ShopeePay</option>
-        <option>Bank Transfer</option>
-    </select>
+</div>
 
-    <input
-        type="tel"
-        placeholder="Nomor WhatsApp"
-        required
-    >
+</section>
 
-    <button type="submit">
-        BELI SEKARANG
-    </button>
+<section class="section" id="payment">
 
-</form>
-                
-        </div>
+<h2 class="section-title">
+METODE PEMBAYARAN
+</h2>
 
-    </section>
+<div class="payment-grid">
 
-    <!-- PROMO -->
+<div class="payment">QRIS</div>
+<div class="payment">DANA</div>
+<div class="payment">OVO</div>
+<div class="payment">GoPay</div>
+<div class="payment">ShopeePay</div>
+<div class="payment">Bank Transfer</div>
 
-    <section id="promo">
+</div>
 
-        <h2>PROMO SPESIAL</h2>
+</section>
 
-        <div class="promo-banner">
+<section class="section" id="cart">
 
-            <h3>DISKON HINGGA 20%</h3>
+<h2 class="section-title">
+KERANJANG BELANJA
+</h2>
 
-            <p>
-                Gunakan Kode Promo :
-            </p>
+<div class="cart">
 
-            <span>APPLE20</span>
+<div id="cartItems">
+Belum ada produk dipilih
+</div>
 
-        </div>
+<h3>
+Total :
+<span id="totalPrice">
+Rp0
+</span>
+</h3>
 
-    </section>
+<a
+id="checkoutBtn"
+class="checkout"
+href="#"
+target="_blank">
 
-    <!-- TESTIMONI -->
+Checkout WhatsApp
 
-    <section id="testimoni">
+</a>
 
-        <h2>TESTIMONI</h2>
+</div>
 
-        <div class="testimonial-grid">
+</section>
 
-            <div class="testimonial">
-                ⭐⭐⭐⭐⭐
-                <p>Top up masuk kurang dari 1 menit.</p>
-            </div>
+<footer>
 
-            <div class="testimonial">
-                ⭐⭐⭐⭐⭐
-                <p>Harga murah dan proses sangat cepat.</p>
-            </div>
+<h3>APPLE ID GAMING</h3>
 
-            <div class="testimonial">
-                ⭐⭐⭐⭐⭐
-                <p>Tampilan website premium dan keren.</p>
-            </div>
+<p>
+Top Up Game Murah • Cepat • Aman • Terpercaya
+</p>
 
-        </div>
+</footer>
 
-    </section>
-
-    <!-- FOOTER -->
-
-    <footer id="kontak">
-
-        <h3>APPLE ID GAMING</h3>
-
-        <p>
-            Top Up Game Premium • Aman • Cepat • Terpercaya
-        </p>
-
-    </footer>
 <script>
-    function closePopup() {
-        document.getElementById("popup").style.display = "none";
-    }
 
-    let cart = [];
-    let total = 0;
+let cart=[];
+let total=0;
 
-    function addToCart(product, price) {
+function addCart(product,price){
 
-        cart.push(product);
-        total += price;
+cart.push(product);
+total+=price;
 
-        document.getElementById("cart-items").innerHTML =
-            cart.join("<br>");
+document.getElementById("cartItems").innerHTML=
+cart.join("<br>");
 
-        document.getElementById("total-price").innerHTML =
-            "Rp " + total.toLocaleString("id-ID");
+document.getElementById("totalPrice").innerHTML=
+"Rp"+total.toLocaleString("id-ID");
 
-        const message =
-            "Halo Admin Apple ID Gaming%0A%0A" +
-            "Saya ingin membeli:%0A" +
-            cart.join("%0A") +
-            "%0A%0ATotal Pembayaran: Rp " +
-            total.toLocaleString("id-ID");
+let msg=
+"Halo Admin APPLE ID GAMING%0A%0ASaya ingin membeli:%0A"+
+cart.join("%0A")+
+"%0A%0ATotal: Rp "+
+total.toLocaleString("id-ID");
 
-        document.getElementById("checkoutBtn").href =
-            "https://wa.me/6281298181338?text=" + message;
-    }
+document.getElementById("checkoutBtn").href=
+"https://wa.me/6281298181338?text="+msg;
+
+}
+
 </script>
-    
-</body>
 
+</body>
 </html>
