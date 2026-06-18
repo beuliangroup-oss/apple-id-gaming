@@ -318,36 +318,34 @@
 
     </footer>
 <script>
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
 
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}
+    let cart = [];
+    let total = 0;
 
-let cart = [];
-let total = 0;
+    function addToCart(product, price) {
 
-function addToCart(product, price){
+        cart.push(product);
+        total += price;
 
-    cart.push(product);
+        document.getElementById("cart-items").innerHTML =
+            cart.join("<br>");
 
-    total += price;
+        document.getElementById("total-price").innerHTML =
+            "Rp " + total.toLocaleString("id-ID");
 
-    document.getElementById("cart-items").innerHTML =
-        cart.join("<br>");
+        const message =
+            "Halo Admin Apple ID Gaming%0A%0A" +
+            "Saya ingin membeli:%0A" +
+            cart.join("%0A") +
+            "%0A%0ATotal Pembayaran: Rp " +
+            total.toLocaleString("id-ID");
 
-    document.getElementById("total-price").innerHTML =
-        "Rp " + total.toLocaleString("id-ID");
-
-    let message =
-        "Halo Admin Apple ID Gaming%0A%0ASaya ingin membeli:%0A" +
-        cart.join("%0A") +
-        "%0A%0ATotal Pembayaran: Rp " +
-        total.toLocaleString("id-ID");
-
-    document.getElementById("checkoutBtn").href =
-        "https://wa.me/6281298181338?text=" + message;
-}
-
+        document.getElementById("checkoutBtn").href =
+            "https://wa.me/6281298181338?text=" + message;
+    }
 </script>
     
 </body>
