@@ -34,7 +34,9 @@ PREMIUM UNIPIN STYLE
 --muted:#b8bfd0;
 --border:rgba(255,255,255,.08);
 }
-
+html{
+scroll-behavior:smooth;
+}
 *{
 margin:0;
 padding:0;
